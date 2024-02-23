@@ -4,4 +4,20 @@
 
 <h2>Welcome to the Dashboard</h2>
 
-<p>This is your dashboard content of BankWebApp</p>
+<div>
+    <button class="btn btn-success" onclick="redirectToAccountActivity('viewBalance')">View Balance</button>
+    <button class="btn btn-primary" onclick="redirectToAccountActivity('transferMoney')">Transfer Money</button>
+    <button class="btn btn-info" onclick="redirectToAccountActivity('transactionHistory')">Transaction History</button>
+</div>
+
+<div style="margin-top: 20px;">
+    <form asp-action="Login" method="post">
+        <button type="submit" class="btn btn-danger">Logout</button>
+    </form>
+</div>
+
+<script>
+    function redirectToAccountActivity(activity) {
+        alert('Redirecting to ' + activity);
+    }
+</script>
